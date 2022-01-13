@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Counter from "..";
+import { expect } from "@jest/globals";
 
 describe("Counter Test", () => {
   it("プラスボタンが表示されている", () => {

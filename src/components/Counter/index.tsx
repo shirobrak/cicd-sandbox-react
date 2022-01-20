@@ -35,7 +35,7 @@ const Counter: FC = (): ReactElement => {
       >
         -
       </button>
-      {/* <button
+      <button
         className="clearButton"
         test-dataid="clearButton"
         onClick={() => {
@@ -43,7 +43,7 @@ const Counter: FC = (): ReactElement => {
         }}
       >
         CLR
-      </button> */}
+      </button>
     </>
   );
 };

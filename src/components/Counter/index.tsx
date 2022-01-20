@@ -1,12 +1,12 @@
 import React, { FC, ReactElement, useState } from "react";
 
 const plusOne = (val: number): number => {
-  if (val >= 10) return 10;
+  // if (val >= 10) return 10;
   return val + 1;
 };
 
 const minusOne = (val: number): number => {
-  if (val <= 0) return 0;
+  // if (val <= 0) return 0;
   return val - 1;
 };
 

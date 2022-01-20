@@ -1,0 +1,26 @@
+name: "test"
+
+on:
+  pull_request:
+
+jobs:
+  unit-test:
+    name: "UnitTest With Jest"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+      - name: yarn install
+        run: yarn install
+      - name: yarn jest
+        run: yarn jest
+  e2e-test:
+    name: "E2ETest With Cypress"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+      - name: yarn install
+        run: yarn install
+      - name: yarn start background
+        run: yarn start&
+      - name: yarn cy:run
+        run: yarn cy:run

@@ -15,7 +15,7 @@ const Counter: FC = (): ReactElement => {
   return (
     <>
       <div className="display" test-dataid="display">
-        {count}
+        Counter: {count}
       </div>
       <button
         className="plusButton"

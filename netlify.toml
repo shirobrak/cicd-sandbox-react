@@ -7,11 +7,13 @@
   NODE_ENV = "production"
   command = "yarn build:prod"
   TEST_VAL = "production"
+[context.deploy-preview]
+  command = "yarn build:dev"
 [context.deploy-preview.environment]
   NODE_ENV = "development"
-  command = "yarn build:dev"
   TEST_VAL = "deploy-preview"
+[context.branch-deploy]
+  command = "yarn build:dev"
 [context.branch-deploy.environment]
   NODE_ENV = "development"
-  command = "yarn build:dev"
   TEST_VAL = "branch-deploy"

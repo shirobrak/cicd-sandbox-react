@@ -1,0 +1,13 @@
+[build]
+  base = "/"
+  publish = "/dist"
+
+[context.production]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  NODE_ENV = "development"
+
+[context.branch-deploy]
+  NODE_ENV = "development"
+

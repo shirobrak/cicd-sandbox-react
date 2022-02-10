@@ -10,23 +10,10 @@ const minusOne = (val: number): number => {
   return val - 1;
 };
 
-const getTitle = (): string => {
-  const nodeEnv = process.env.NODE_ENV;
-  switch (nodeEnv) {
-    case "production":
-      return "Production";
-    case "development":
-      return "Development";
-    default:
-      return "Unknown";
-  }
-};
-
 const Counter: FC = (): ReactElement => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <div>{getTitle()}</div>
       <div className="display" test-dataid="display">
         {count}
       </div>

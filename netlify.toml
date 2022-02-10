@@ -2,10 +2,10 @@
   base = "/"
   publish = "/dist"
 
-
+[context.production]
+  command = "yarn build:prod"
 [context.production.environment]
   NODE_ENV = "production"
-  command = "yarn build:prod"
   TEST_VAL = "production"
 [context.deploy-preview]
   command = "yarn build:dev"

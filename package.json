@@ -6,7 +6,8 @@
     "license": "MIT",
     "scripts": {
         "start": "yarn run webpack-dev-server",
-        "build": "yarn run webpack --config webpack.config.js",
+        "build:dev": "APP_ENV=dev yarn run webpack --config webpack.config.js",
+        "build:prod": "APP_ENV=prod yarn run webpack --config webpack.config.js",
         "test": "jest",
         "cy:open": "cypress open",
         "cy:run": "cypress run"
@@ -25,6 +26,7 @@
         "@typescript-eslint/eslint-plugin": "^5.3.1",
         "@typescript-eslint/parser": "^5.3.1",
         "cypress": "^9.2.1",
+        "dotenv-webpack": "^7.1.0",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.6",
         "eslint": "^8.2.0",

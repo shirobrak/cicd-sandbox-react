@@ -2,6 +2,13 @@
 const path = require("path");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const DotenvWebpackPlugin = require("dotenv-webpack");
+
+const envFilePath = () => {
+  const envName = process.env.APP_ENV ?? "dev";
+  return ".env." + envName;
+};
 
 /** @typedef {import('webpack').Configuration} WebpackConfiguration */
 
@@ -33,6 +40,9 @@ const config = {
       title: "My React App",
       template: "./src/index.html",
       filename: "index.html",
+    }),
+    new DotenvWebpackPlugin({
+      path: envFilePath(),
     }),
   ],
   resolve: {

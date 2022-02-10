@@ -1,0 +1,19 @@
+[build]
+  base = "/"
+  publish = "/dist"
+
+[context.production]
+  command = "yarn build:prod"
+[context.production.environment]
+  NODE_ENV = "production"
+  TEST_VAL = "production"
+[context.deploy-preview]
+  command = "yarn build:dev"
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  TEST_VAL = "deploy-preview"
+[context.branch-deploy]
+  command = "yarn build:dev"
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+  TEST_VAL = "branch-deploy"

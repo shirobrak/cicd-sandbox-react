@@ -14,6 +14,8 @@ const Counter: FC = (): ReactElement => {
   const [count, setCount] = useState(0);
   return (
     <>
+      <div>{`NODE_ENV: ${process.env.NODE_ENV}`}</div>
+      <div>{`TEST_VAL: ${process.env.TEST_VAL}`}</div>
       <div className="display" test-dataid="display">
         {count}
       </div>

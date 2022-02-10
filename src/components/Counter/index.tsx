@@ -27,6 +27,7 @@ const Counter: FC = (): ReactElement => {
   return (
     <>
       <div>{getTitle()}</div>
+      <div>{process.env.TEST_VAL ?? "local"}</div>
       <div className="display" test-dataid="display">
         {count}
       </div>
